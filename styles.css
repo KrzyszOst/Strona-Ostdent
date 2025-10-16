@@ -1,0 +1,1052 @@
+/* Resetowanie stylów */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh; 
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Nagłówek */
+header {
+    font-family: 'Montserrat', sans-serif;
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+    font-weight: 500;
+}
+header .container {
+    display: flex;
+    align-items: center; /* Wyrównanie w pionie */
+    justify-content: space-between; /* Równomierne rozmieszczenie */
+    max-width: 1200px; /* Szerokość nagłówka */
+    margin: 0 auto; /* Wyśrodkowanie */
+    padding: 0 20px; /* Opcjonalne odstępy po bokach */
+}
+
+header .logo {
+    margin-left: -20px; 
+}
+
+header .logo img {
+    height: 90px; 
+    object-fit: contain;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+header nav ul li {
+    position: relative;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #0044cc;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    list-style: none;
+    padding: 0.5rem 0;
+    border-radius: 5px;
+}
+
+.dropdown-menu li {
+    padding: 0.5rem 1rem;
+}
+
+.dropdown-menu li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background: #f5f5f5;
+    color: #0044cc;
+}
+
+/* Pokazywanie menu na hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Strzałka obok tekstu */
+.arrow-down {
+    font-size: 1.3rem;
+    margin-left: 0.1rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover .arrow-down {
+    transform: rotate(180deg);
+}
+
+/* Przyciski i linki w headerze */
+header .appointment {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .appointment .phone-link {
+    color: #000000; /* Wyróżniający kolor numeru */
+    font-weight: 700;
+    font-size: 1.2rem; /* Większy rozmiar numeru */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Odstęp między ikoną a numerem */
+    transition: color 0.3s ease;
+}
+
+header .appointment .phone-link i {
+    color: #4CAF50; /* Zielony kolor ikony telefonu */
+    font-size: 1.5rem; /* Powiększona ikona */
+}
+
+header .appointment .phone-link:hover {
+    color: #4CAF50;
+}
+
+header .appointment .facebook-link img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s ease;
+}
+
+header .appointment .facebook-link img:hover {
+    opacity: 0.7;
+}
+
+/* Sekcja powitalna */
+.hero {
+    background: #e6e6e6;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #0044cc;
+}
+
+.hero p {
+    margin: 1rem 0;
+    color: #666;
+}
+
+.hero .btn {
+    background: #4CAF50;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Stopka */
+footer {
+    background: #333333; /* Ciemnoszare tło */
+    color: #ffffff; /* Biały tekst */
+    padding: 2rem 1rem 1rem; /* Zmniejszenie dolnego paddingu */
+    border-top: 1px solid #444444;
+    font-size: 0.9rem;
+    margin-top: auto; /* Stopka zawsze na dole */
+    text-align: center; /* Wyrównanie do środka */
+}
+
+.footer-logo {
+    width: 150px; /* Szerokość logo w stopce */
+    margin: 0 auto 1rem auto;
+    display: block;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-evenly; /* Równomierne rozmieszczenie sekcji */
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap; /* Umożliwia zawijanie sekcji w węższych widokach */
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 240px;
+    max-width: 280px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.footer-section h3 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-section ul li {
+    color: #dddddd;
+    margin-bottom: 0.5rem;
+}
+
+.privacy-link {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.privacy-link:hover {
+    text-decoration: underline;
+}
+
+.footer-section.contact .appointment-cta {
+    color: #4CAF50; /* Zielony kolor */
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.footer-section.map iframe {
+    border-radius: 8px;
+    border: none;
+    width: 100%; /* Dopasowanie mapy do szerokości sekcji */
+    height: 200px;
+}
+
+/* Copyright w stopce */
+footer::after {
+    content: "© 2025 Ostdent. Wszelkie prawa zastrzeżone.";
+    display: block;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #999999;
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #444444;
+}
+
+/* Responsywność */
+@media (max-width: 1200px) {
+    .footer-content {
+        flex-wrap: wrap;
+    }
+}
+
+/* Stylizacja dla podstrony przetwarzania danych */
+.data-page {
+    padding: 2rem;
+    background: #f8f8f8;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    color: #333;
+}
+
+.data-page h1 {
+    font-size: 2rem;
+    color: #0044cc;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.data-page .intro {
+    text-align: center; /* Wyśrodkowanie tekstu w sekcji wstępnej */
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.data-page .subheading {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: left; /* Wyrównanie do lewej */
+    margin: 0 auto; /* Wyśrodkowanie kontenera */
+    max-width: 80%; /* Ograniczenie szerokości */
+}
+
+.data-page .info-section {
+    margin-top: 2rem;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.data-page .info-section ol {
+    padding-left: 1.5rem;
+}
+
+.data-page .info-section ol li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .data-page .subheading,
+    .data-page .info-section {
+        max-width: 95%;
+    }
+}
+
+
+
+
+
+.protetyka-section {
+    background: linear-gradient(to bottom, #f4f7fc, #eef1f6); /* Subtelny gradient */
+    padding: 60px 20px; /* Więcej przestrzeni */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px solid #1e90ff; /* Dekoracyjny akcent na górze sekcji */
+    border-bottom: 3px solid #1e90ff;
+}
+
+.protetyka-section .container {
+    display: flex;
+    align-items: center; /* Wyśrodkowanie zawartości kontenera w pionie */
+    justify-content: space-between;
+    flex-wrap: wrap; /* Zapewnia responsywność */
+    max-width: 1200px;
+    gap: 30px;
+}
+
+.protetyka-section .text-content {
+    flex: 1 1 50%; /* Tekst zajmuje połowę szerokości */
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.protetyka-section .text-content h2 {
+    font-size: 32px;
+    color: #0056b3; /* Głębszy odcień błękitu */
+    margin-bottom: 20px;
+    border-left: 5px solid #1e90ff; /* Dekoracyjna linia */
+    padding-left: 15px;
+}
+
+.protetyka-section .text-content h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.protetyka-section .text-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify; /* Wyjustowanie tekstu */
+}
+
+.protetyka-section .text-content ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.protetyka-section .text-content ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+    color: #333;
+}
+
+.protetyka-section .text-content ul li:before {
+    content: '✓'; /* Ikona */
+    color: #1e90ff;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.protetyka-section .image-content {
+    flex: 1 1 40%; /* Obrazy zajmują 45% szerokości */
+    display: flex;
+    flex-direction: column; /* Zdjęcia jedno pod drugim */
+    align-items: center; /* Centruje zdjęcia w poziomie */
+    justify-content: center; /* Centruje zdjęcia w pionie */
+    gap: 20px; /* Odstęp między zdjęciami */
+    height: 100%; /* Rozciągnięcie kontenera zdjęć na całą wysokość rodzica */
+}
+
+
+.protetyka-section .image-content img {
+    max-width: 100%; /* Zdjęcia zajmują pełną szerokość kontenera */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Subtelny cień */
+    transform: scale(1);
+    transition: transform 0.3s ease; /* Efekt powiększenia na hover */
+}
+
+.protetyka-section .image-content img:hover {
+    transform: scale(1.05); /* Powiększenie przy najechaniu */
+}
+
+/* Dostosowanie dla mniejszych ekranów */
+@media (max-width: 768px) {
+    .protetyka-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .protetyka-section .text-content,
+    .protetyka-section .image-content {
+        flex: 1 1 100%; /* Elementy zajmują pełną szerokość */
+    }
+
+    .protetyka-section .image-content img {
+        max-width: 80%; /* Zdjęcia są węższe na małych ekranach */
+    }
+}
+
+
+
+
+
+
+.hero-section {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffffff, #e6f7ff); /* Delikatny gradient */
+}
+
+.hero-section .container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+
+
+.hero-section .text-content {
+    flex: 1; /* Takes up 50% of the width */
+    padding: 40px 40px 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: justify;
+    position: relative;
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.85); /* Półprzezroczyste białe tło */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Delikatny cień */
+    border-radius: 8px; /* Zaokrąglone rogi */
+}
+
+.hero-section .text-content h1 {
+    font-size: 64px;
+    font-weight: 800;
+    color: #3c3e41;
+    margin-bottom: 10px;
+    line-height: 1.1;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtelny cień pod tekstem */
+}
+
+.hero-section .text-content h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #59a4f3; /* Akcent w kolorze niebieskim */
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-section .text-content p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #555555;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 40px;
+}
+
+.hero-section .image-content {
+    flex: 1; /* Takes up 50% of the width */
+    height: 100%; /* Matches the height of the section */
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+}
+
+.hero-section .image-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the space */
+    display: block;
+    filter: grayscale(10%); /* Lekki efekt szarości dla elegancji */
+}
+
+
+
+
+.services-section {
+    background: linear-gradient(135deg, #ffffff, #e6f7ff);
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0056b3;
+    margin-bottom: 40px; /* Ustawi odstęp od zdjęć */
+    text-align: center;
+    width: 100%;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #1e90ff;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.container-service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    max-width: 1200px;
+}
+
+.service-item {
+    text-align: center;
+}
+
+.service-item img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.service-item p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+}
+
+/* 🔹 Responsywność */
+@media (max-width: 1024px) {
+    .services-icons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-icons {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .service-item img {
+        max-width: 80%;
+    }
+}
+
+
+
+.reviews-section {
+    background: linear-gradient(135deg, #e6f7ff, #ffffff);
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0056b3;
+    margin-bottom: 30px;
+}
+
+/* Główny kontener sekcji */
+.reviews-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Wrapper, który ogranicza widoczność */
+.reviews-wrapper {
+    width: 100%;
+    max-width: 900px; /* Zapewnia pełną szerokość */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Poprawiony slider – szerokość liczy się na podstawie liczby elementów */
+.reviews-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+/* Każda opinia */
+.review {
+    flex: 0 0 calc(100% / 3); /* Każda opinia zajmuje 1/3 szerokości kontenera */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0 10px;
+}
+
+/* Stylizacja tekstu opinii */
+.review-text {
+    font-size: 18px;
+    font-style: italic;
+    color: #333;
+}
+
+/* Nazwa autora */
+.review-author {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Gwiazdki */
+.stars {
+    font-size: 22px;
+    color: #FFD700;
+    margin-top: 5px;
+}
+
+/* Strzałki */
+.prev-btn, .next-btn {
+    background: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.prev-btn { left: -50px; }
+.next-btn { right: -50px; }
+
+.prev-btn:hover, .next-btn:hover {
+    background: #003f7f;
+}
+
+/* Przycisk "Zostaw swoją opinię" */
+.leave-review-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.leave-review-btn {
+    padding: 12px 20px;
+    font-size: 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.google-review {
+    background: #1e90ff;
+    color: white;
+}
+
+.google-review:hover {
+    background: #007bff;
+}
+
+.znany-lekarz-review {
+    background: #00c3a5
+    
+    ;
+    color: white;
+}
+
+.znany-lekarz-review:hover {
+    background: #02ddbc;
+}
+
+/* 🔹 Responsywność */
+@media (max-width: 768px) {
+    .reviews-wrapper {
+        max-width: 100%;
+    }
+
+    .review {
+        flex: 0 0 100%; /* Na telefonach pokazuje 1 opinię na raz */
+    }
+
+    .prev-btn, .next-btn {
+        left: 10px;
+        right: 10px;
+    }
+}
+
+
+
+
+
+.pricing-section {
+    background: linear-gradient(135deg, #ffffff, #e6f7ff);
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+.pricing-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-table th, .pricing-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.pricing-table th {
+    background: #f5f5f5;
+    font-weight: bold;
+}
+
+.pricing-table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+
+
+
+.certificates-section {
+    background: linear-gradient(135deg, #ffffff, #e6f7ff);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0056b3;
+    margin-bottom: 30px;
+}
+
+/* Kontener certyfikatów - teraz pełna szerokość */
+.certificates-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Dynamiczna szerokość */
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Certyfikaty - większe i lepsza jakość */
+.certificate {
+    width: 100%;
+    height: 250px; /* Większa wysokość dla lepszej widoczności */
+    object-fit: contain; /* Zapewnia czytelność treści certyfikatu */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.certificate:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal (Lightbox) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Lepsza jakość obrazu w powiększeniu */
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Zamknięcie modala */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #ccc;
+}
+
+/* 🔹 Responsywność */
+@media (max-width: 1200px) {
+    .certificates-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 w rzędzie na tabletach */
+    }
+}
+
+@media (max-width: 768px) {
+    .certificates-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 w rzędzie na telefonach */
+    }
+}
+
+@media (max-width: 480px) {
+    .certificates-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 w rzędzie na małych ekranach */
+    }
+}
+
+
+
+.about-section {
+    background: linear-gradient(135deg, #ffffff, #e6f7ff);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+.about-description {
+    font-size: 18px;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+/* Kontener zespołu */
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Styl pojedynczego członka zespołu */
+.team-member {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Zdjęcia lekarzy */
+.team-member img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Imię i stanowisko */
+.team-member h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.team-member .position {
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+
+.team-member p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+
+
+
+
+
+.pierwsza-sekcja {
+    position: relative;
+    width: 100%;
+    height: 90vh; 
+    background: url('images/gabinet9.jpg') no-repeat center center/cover; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+
+.pierwsza-sekcja .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.pierwsza-sekcja-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.pierwsza-sekcja-content h1 {
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.pierwsza-sekcja-content h2 {
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.pierwsza-sekcja-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .pierwsza-sekcja {
+        height: 70vh; 
+    }
+
+    .pierwsza-sekcja-content h1 {
+        font-size: 36px;
+    }
+
+    .pierwsza-sekcja-content h2 {
+        font-size: 20px;
+    }
+
+    .pierwsza-sekcja-content p {
+        font-size: 16px;
+    }
+}
+
+
+
