@@ -11,47 +11,57 @@
 </head>
 <body>
     <!-- Nagłówek -->
-    <header>
-        <div class="container">
+     <header>
+        <div class="container header-container">
             <div class="logo">
-                <a href="index.html">
-                    <img src="ostdent.png" alt="Logo Ostdent">
-                </a>
+            <a href="index.html">
+                <img src="ostdent.png" alt="Logo Ostdent">
+            </a>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Strona główna</a></li>
-                    <li class="dropdown">
-                        <a href="#uslugi">Usługi <span class="arrow-down">&#9662;</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="stomatologia-zachowawcza.html">Stomatologia zachowawcza</a></li>
-                            <li><a href="leczenie-kanalowe.html">Leczenie kanałowe</a></li>
-                            <li><a href="protetyka.html">Protetyka</a></li>
-                            <li><a href="implantologia.html">Implantologia</a></li>
-                            <li><a href="profilaktyka-i-higiena.html">Profilaktyka i higiena</a></li>
-                            <li><a href="chirurgia-stomatologiczna.html">Chirurga stomatologiczna</a></li>
-                            <li><a href="rentgenodiagnostyka.html">Rentgenodiagnostyka</a></li>
-                            <li><a href="wybielanie-zebow.html">Wybielanie zębów</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="index.html#o-nas">O nas</a></li>
-                    <li><a href="certyfikaty.html">Certyfikaty</a></li>
-                    <li><a href="cennik.html">Cennik</a></li>
-                    <li><a href="index.html#opinie">Opinie</a></li>
-                    <li><a href="index.html#footer">Kontakt</a></li>
+
+            <!-- NOWE: hamburger -->
+            <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Otwórz menu">
+            <span></span><span></span><span></span>
+            </button>
+
+            <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Strona główna</a></li>
+
+                <li class="dropdown">
+                <a href="#uslugi" class="dropdown-toggle">
+                    Usługi <span class="arrow-down">&#9662;</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="stomatologia-zachowawcza.html">Stomatologia zachowawcza</a></li>
+                    <li><a href="leczenie-kanalowe.html">Leczenie kanałowe</a></li>
+                    <li><a href="protetyka.html">Protetyka</a></li>
+                    <li><a href="implantologia.html">Implantologia</a></li>
+                    <li><a href="profilaktyka-i-higiena.html">Profilaktyka i higiena</a></li>
+                    <li><a href="chirurgia-stomatologiczna.html">Chirurga stomatologiczna</a></li>
+                    <li><a href="rentgenodiagnostyka.html">Rentgenodiagnostyka</a></li>
+                    <li><a href="wybielanie-zebow.html">Wybielanie zębów</a></li>
                 </ul>
+                </li>
+
+                <li><a href="index.html#o-nas">O nas</a></li>
+                <li><a href="certyfikaty.html">Certyfikaty</a></li>
+                <li><a href="cennik.html">Cennik</a></li>
+                <li><a href="index.html#opinie">Opinie</a></li>
+                <li><a href="index.html#footer">Kontakt</a></li>
+            </ul>
             </nav>
+
             <div class="appointment">
-                <a href="tel:+48602669543" class="phone-link">
-                    <i class="fas fa-phone-alt"></i> 602 669 543
-                </a>
-                <a href="https://www.facebook.com/stomatologostrzycki" target="_blank" class="facebook-link">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
-                </a>
+            <a href="tel:+48602669543" class="phone-link">
+                <i class="fas fa-phone-alt"></i> 602 669 543
+            </a>
+            <a href="https://www.facebook.com/stomatologostrzycki" target="_blank" class="facebook-link">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
             </div>
         </div>
     </header>
-
  <!-- Sekcja Stomatologia Zachowawcza -->
 <section class="protetyka-section">
     <div class="container">
@@ -87,7 +97,7 @@
         <div id="footer" class="footer-content">
             <div class="footer-section about">
                 <img src="ostdent.png" alt="Logo Ostdent" class="footer-logo">
-                <p>Każdy pacjent naszej kliniki otrzymuje indywidualne podejście oraz szczegółowy plan leczenia dopasowany do jego potrzeb.</p>
+                <p>Każdy pacjent w naszym gabinecie otrzymuje indywidualne podejście oraz szczegółowy plan leczenia dopasowany do jego potrzeb.</p>
                 <a href="przetwarzanie-danych.html" class="privacy-link">Polityka prywatności</a>
             </div>
             <div class="footer-section map">
@@ -96,26 +106,67 @@
             </div>
             <div class="footer-section hours">
                 <h3>Godziny otwarcia</h3>
-                <ul>
-                    <li>Poniedziałek: 8:00 - 16:00</li>
-                    <li>Wtorek: 10:00 - 18:00</li>
-                    <li>Środa: 8:00 - 16:00</li>
-                    <li>Czwartek: 10:00 - 18:00</li>
-                    <li>Piątek: 8:00 - 14:00</li>
-                    <li>Sobota: 9:00 - 13:00</li>
-                    <li>Niedziela: Zamknięte</li>
+                <ul class="hours-list">
+                    <li><span>Poniedziałek</span><span>9:30 – 16:30</span></li>
+                    <li><span>Wtorek</span><span>13:00 – 20:30</span></li>
+                    <li><span>Środa</span><span>10:30 – 20:30</span></li>
+                    <li><span>Czwartek</span><span>13:00 – 20:30</span></li>
+                    <li><span>Piątek</span><span>9:30 – 16:30</span></li>
+                    <li><span>Sobota</span><span>Zamknięte</span></li>
+                    <li><span>Niedziela</span><span>Zamknięte</span></li>
                 </ul>
             </div>
+
             <div class="footer-section contact">
                 <h3>Kontakt</h3>
                 <ul>
-                    <li><i class="fas fa-envelope"></i> ostdent@wp.pl</li>
-                    <li><i class="fas fa-phone"></i> 602 669 543</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Sopocka 2c, Gdynia</li>
+                    <li><i class="fas fa-phone"></i> 602 669 543</li></ul>
+                    <h3>E-mail</h3>
+                    <ul>
+                    <li><i class="fas fa-envelope"></i> ostdent@wp.pl</li> </ul>
+                    <h3>Adres</h3> <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> ul. Sopocka 2C/2, Gdynia</li>
                 </ul>
                 <p class="appointment-cta">Umów się już dziś!</p>
             </div>
         </div>
     </footer>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector("header");
+    const navToggle = document.querySelector(".nav-toggle");
+    const dropdownToggle = document.querySelector(".dropdown-toggle");
+    const dropdownLi = document.querySelector(".dropdown");
+
+    // Hamburger
+    navToggle.addEventListener("click", () => {
+      const isOpen = header.classList.toggle("nav-open");
+      navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+
+    // Dropdown na mobile (klik zamiast hover)
+    dropdownToggle.addEventListener("click", (e) => {
+      if (window.matchMedia("(max-width: 992px)").matches) {
+        e.preventDefault();
+        dropdownLi.classList.toggle("open");
+      }
+    });
+
+    // (opcjonalnie) zamknij menu po kliknięciu linku na mobile
+    document.querySelectorAll("header nav a").forEach(a => {
+  a.addEventListener("click", (e) => {
+    // NIE zamykaj menu, gdy kliknięto "Usługi" (dropdown-toggle)
+    if (a.classList.contains("dropdown-toggle")) return;
+
+    if (window.matchMedia("(max-width: 992px)").matches) {
+      header.classList.remove("nav-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+});
+
+  });
+</script>
+
 </body>
 </html>
