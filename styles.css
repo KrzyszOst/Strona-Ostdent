@@ -1256,6 +1256,28 @@ html, body {
   }
 }
 
+@media (max-width: 768px) {
+  .reviews-container {
+    flex-direction: column;
+  }
+
+  .prev-btn,
+  .next-btn {
+    position: static;     /* ❗ przestają nachodzić */
+    transform: none;
+    margin: 15px 10px 0;
+  }
+
+  .reviews-container > .prev-btn,
+  .reviews-container > .next-btn {
+    order: 2;             /* strzałki pod opinią */
+  }
+
+  .reviews-wrapper {
+    order: 1;
+  }
+}
+
 
 
 
