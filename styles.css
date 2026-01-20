@@ -14,14 +14,17 @@ body {
     min-height: 100vh; 
 }
 
+/* lepsze zachowanie szerokości na mobile */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* GLOBALNY container – bez flex */
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
+
 
 /* Nagłówek */
 header {
@@ -32,13 +35,12 @@ header {
     font-weight: 500;
 }
 header .container {
-    display: flex;
-    align-items: center; /* Wyrównanie w pionie */
-    justify-content: space-between; /* Równomierne rozmieszczenie */
-    max-width: 1200px; /* Szerokość nagłówka */
-    margin: 0 auto; /* Wyśrodkowanie */
-    padding: 0 20px; /* Opcjonalne odstępy po bokach */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
 }
+
 
 header .logo {
     margin-left: -20px; 
@@ -184,6 +186,120 @@ header .appointment .facebook-link img:hover {
     font-weight: 500;
 }
 
+/* Hamburger (domyślnie ukryty na desktopie) */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #333;
+  margin: 6px 0;
+}
+
+/* MOBILE */
+@media (max-width: 992px) {
+  header {
+    padding: 0.75rem 0;
+  }
+
+  header .logo img {
+    height: 64px;
+  }
+
+  /* usuwamy hack z logo (ważne na mobile) */
+  header .logo {
+    margin-left: 0;
+  }
+
+  /* pozwól headerowi się zawijać */
+  header .header-container {
+    flex-wrap: wrap;
+  }
+
+  /* pokaż hamburger */
+  .nav-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* appointment niech zostanie w górnym rzędzie */
+  header .appointment {
+    margin-left: auto;
+    gap: 12px;
+  }
+
+  header .appointment .phone-link {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
+  /* nav spada pod górny rząd */
+  header nav {
+    width: 100%;
+    display: none;   /* ukryte dopóki nie otworzysz */
+    order: 10;
+    padding-top: 10px;
+  }
+
+  header.nav-open nav {
+    display: block;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  header nav ul li {
+    width: 100%;
+  }
+
+  header nav ul li a {
+    display: block;
+    padding: 12px 0;
+  }
+
+  /* Dropdown: na mobile nie absolute, tylko normalnie */
+  .dropdown-menu {
+    position: static;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    display: none; /* sterowane klasą .open */
+  }
+
+  /* wyłącz hover na mobile */
+  .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+
+  /* otwieranie dropdown na klik */
+  .dropdown.open .dropdown-menu {
+    display: block;
+    padding-left: 12px;
+  }
+
+  .dropdown-menu li a {
+    padding: 10px 0;
+    font-size: 0.95rem;
+  }
+}
+/* KROK 2: hero ma być na całą szerokość (mimo że .container jest max-width:1200) */
+.hero-section .container {
+  max-width: 100%;
+  padding: 0;          /* usuwa boczne 20px z globalnego .container */
+}
+
+
 /* Stopka */
 footer {
     background: #333333; /* Ciemnoszare tło */
@@ -216,7 +332,40 @@ footer {
     margin-bottom: 1rem;
     text-align: center;
 }
+.footer-section.hours ul {
+    text-align: left;
+}
 
+.hours-list li {
+    display: grid;
+    grid-template-columns: 120px 1fr; /* szerokość dni */
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.hours-list span:first-child {
+    font-weight: 500;
+}
+
+.hours-list span:last-child {
+    text-align: left;
+    white-space: nowrap;
+}
+.footer-section.hours {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* środek jako BLOK */
+}
+
+.hours-list {
+    width: fit-content;  /* szerokość = zawartość */
+}
+
+.footer-section.hours h3 {
+    width: fit-content;
+    text-align: center;
+    margin-bottom: 0.8rem;
+}
 .footer-section h3 {
     color: #ffffff;
     margin-bottom: 0.5rem;
@@ -259,7 +408,7 @@ footer {
 
 /* Copyright w stopce */
 footer::after {
-    content: "© 2025 Ostdent. Wszelkie prawa zastrzeżone.";
+    content: "© 2026 Ostdent. Wszelkie prawa zastrzeżone.";
     display: block;
     margin-top: 2rem;
     font-size: 0.8rem;
@@ -924,12 +1073,13 @@ footer::after {
 
 /* Kontener zespołu */
 .team-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
 
 /* Styl pojedynczego członka zespołu */
 .team-member {
@@ -939,6 +1089,14 @@ footer::after {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    grid-column: span 2;
+}
+.team-container .team-member:nth-child(4) {
+  grid-column: 2 / span 2; /* środek-lewo */
+}
+
+.team-container .team-member:nth-child(5) {
+  grid-column: 4 / span 2; /* środek-prawo */
 }
 
 .team-member:hover {
@@ -977,6 +1135,26 @@ footer::after {
 }
 
 
+@media (max-width: 1024px) {
+  .team-container {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+
+  .team-member {
+    grid-column: auto; /* wyłącz span 2 */
+  }
+
+  .team-container .team-member:nth-child(4),
+  .team-container .team-member:nth-child(5) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .team-container {
+    grid-template-columns: 1fr;
+  }
+}
 
 
 
@@ -1047,6 +1225,8 @@ footer::after {
         font-size: 16px;
     }
 }
+
+
 
 
 
