@@ -1263,14 +1263,14 @@ html, body {
 
   .prev-btn,
   .next-btn {
-    position: static;     /* ❗ przestają nachodzić */
+    position: static;    
     transform: none;
     margin: 15px 10px 0;
   }
 
   .reviews-container > .prev-btn,
   .reviews-container > .next-btn {
-    order: 2;             /* strzałki pod opinią */
+    order: 2;            
   }
 
   .reviews-wrapper {
@@ -1279,7 +1279,6 @@ html, body {
 }
 
 
-/* 🔹 MOBILE FIX DLA CENNIKA – PROTETYKA */
 @media (max-width: 768px) {
   .pricing-table {
     display: block;
@@ -1294,6 +1293,7 @@ html, body {
     hyphens: auto;
   }
 }
+
 
 
 
