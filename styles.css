@@ -1279,31 +1279,6 @@ html, body {
 }
 
 
-@media (max-width: 768px) {
-  .pricing-table {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  /* LEWA KOLUMNA – opisy usług */
-  .pricing-table td:first-child,
-  .pricing-table th:first-child {
-    word-break: break-word;
-    hyphens: auto;
-  }
-
-  /* PRAWA KOLUMNA – CENA */
-  .pricing-table td:last-child,
-  .pricing-table th:last-child {
-    white-space: nowrap;
-    word-break: normal;
-    hyphens: none;
-    text-align: right;
-  }
-}
-
 
 
 
