@@ -1287,12 +1287,23 @@ html, body {
     -webkit-overflow-scrolling: touch;
   }
 
-  .pricing-table th,
-  .pricing-table td {
+  /* LEWA KOLUMNA – opisy usług */
+  .pricing-table td:first-child,
+  .pricing-table th:first-child {
     word-break: break-word;
     hyphens: auto;
   }
+
+  /* PRAWA KOLUMNA – CENA */
+  .pricing-table td:last-child,
+  .pricing-table th:last-child {
+    white-space: nowrap;
+    word-break: normal;
+    hyphens: none;
+    text-align: right;
+  }
 }
+
 
 
 
