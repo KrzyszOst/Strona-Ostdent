@@ -635,11 +635,11 @@ footer::after {
 }
 
 .hero-section .text-content h1 {
-    font-size: 64px;
+    font-size: clamp(36px, 7.5vw, 64px);
     font-weight: 800;
     color: #3c3e41;
     margin-bottom: 10px;
-    line-height: 1.1;
+    line-height: 1.15;
     font-family: 'Poppins', sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtelny cień pod tekstem */
 }
@@ -1277,6 +1277,7 @@ html, body {
     order: 1;
   }
 }
+
 
 
 
