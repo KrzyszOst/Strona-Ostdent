@@ -1293,6 +1293,39 @@ html, body {
 
 }
 
+/* 🔧 FIX: Rentgenodiagnostyka – Android mobile */
+@media (max-width: 768px) {
+
+  .protetyka-section .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .protetyka-section .text-content {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;            /* ❗ nie justify na mobile */
+    word-break: break-word;      /* Android fix */
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .protetyka-section .text-content p {
+    text-align: left;
+    line-height: 1.6;
+  }
+
+  .protetyka-section .image-content {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .protetyka-section .image-content img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 
 
 
