@@ -1326,6 +1326,21 @@ html, body {
   }
 }
 
+@media (max-width: 768px) {
+
+  .hero-section .text-content {
+    text-align: left !important;
+  }
+
+  .hero-section .text-content p {
+    text-align: left !important;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+}
+
 
 
 
