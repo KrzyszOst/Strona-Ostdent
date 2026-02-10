@@ -1278,7 +1278,22 @@ html, body {
   }
 }
 
+@media (max-width: 768px) {
 
+  /* TYLKO PROTETYKA */
+  .pricing-protetyka td:first-child {
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .pricing-protetyka td:last-child {
+    white-space: nowrap;
+    word-break: keep-all;
+  }
+
+}
 
 
 
